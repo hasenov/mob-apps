@@ -23,42 +23,43 @@
 
 <body>
 
-	<header class="header">
-		<div class="header__content container">
+	<section class="section-showcase" style="background-image: url(img/bg_main.png);">
 
-			<div class="header__logo-wrap">
-				<img class="header__logo" src="img/logo.png" alt="logo">
-			</div>
-
-			<nav class="header__menu menu">
-				<ul class="menu__list">
-					<li><a href="#" class="menu__link">Получить КП</a></li>
-					<li><a href="#" class="menu__link">Гарантия</a></li>
-					<li><a href="#" class="menu__link">Условия работы</a></li>
-					<li><a href="#" class="menu__link">Схема работы</a></li>
-					<li><a href="#" class="menu__link">Кейсы</a></li>
-				</ul>
-			</nav>
-
-			<div class="header__contacts contacts-header">
-				<div class="contacts-header__links">
-					<p class="contacts-header__text"><a href="#" class="contacts-header__link">+7 (499) 110-54-90</a></p>
-					<p class="contacts-header__text contacts-header__text--sm"><a href="#" class="contacts-header__link">sales@tecman.ru</a></p>
+		<header class="header">
+			<div class="header__content container">
+	
+				<div class="header__logo-wrap">
+					<img class="header__logo" src="img/logo.png" alt="logo">
 				</div>
-				<div class="contacts-header__actions">
-					<div class="contacts-header__action-item">
-						<svg class="contacts-header__icon" role="img">
-							<use href="img/icons/sprite.svg#whatsapp"/>
-						</svg>
+	
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li><a href="#" class="menu__link">Получить КП</a></li>
+						<li><a href="#" class="menu__link">Гарантия</a></li>
+						<li><a href="#" class="menu__link">Условия работы</a></li>
+						<li><a href="#" class="menu__link">Схема работы</a></li>
+						<li><a href="#" class="menu__link">Кейсы</a></li>
+					</ul>
+				</nav>
+	
+				<div class="header__contacts contacts-header">
+					<div class="contacts-header__links">
+						<p class="contacts-header__text"><a href="#" class="contacts-header__link">+7 (499) 110-54-90</a></p>
+						<p class="contacts-header__text contacts-header__text--sm"><a href="#" class="contacts-header__link">sales@tecman.ru</a></p>
+					</div>
+					<div class="contacts-header__actions">
+						<a class="contacts-header__action-item" href="#">
+							<svg class="contacts-header__icon" role="img">
+								<use href="img/icons/sprite.svg#whatsapp"/>
+							</svg>
+						</a>
 					</div>
 				</div>
+	
 			</div>
+		</header>
 
-		</div>
-	</header>
-
-	<section class="section-showcase">
-		<div class="container">
+		<div class="section-showcase__content container">
 			<div class="row">
 				<div class="col-md-7">
 					<div class="showcase">
@@ -90,17 +91,28 @@
 				<h4 class="callback__title">Получите <span class="color-secondary">видеопрезентацию</span> наших работ в вашей сфере бизнеса</h4>
 				<form class="callback__form form-callback">
 					<div class="form-callback__fields">
-						<select class="form-callback__select form-callback__control">
-							<option value=""></option>
-							<option value="Игры">Игры</option>
-						</select>
-						<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
-						<input type="submit" value="Получить демонстрацию" class="form-callback__btn btn">
+						<div class="form-callback__field">
+							<label class="form-callback__label" for="business">Вид бизнеса *</label>
+							<select name="business"	id="business" class="form-callback__select form-callback__control">
+								<option value="0">Игры</option>
+								<option value="1">Банки и финансовые организации</option>
+								<option value="2">Стартапы</option>
+								<option value="3" selected>Сфера услуг</option>
+							</select>
+						</div>
+						<div class="form-callback__field">
+							<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+						</div>
+						<div class="form-callback__field">
+							<input type="submit" value="Получить демонстрацию" class="form-callback__btn btn">
+						</div>
 					</div>
 					<p class="form-callback__accept">
-						<svg class="form-callback__accept-icon" role="img">
-							<use href="img/icons/sprite.svg#check"/>
-						</svg>
+						<span class="form-callback__accept-icon-wrap">
+							<svg class="form-callback__accept-icon" role="img">
+								<use href="img/icons/sprite.svg#check"/>
+							</svg>
+						</span>
 						Я даю согласие на
 						<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
 					</p>
