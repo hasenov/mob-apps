@@ -38,6 +38,9 @@ body
 b, strong
 	font-weight: bold
 
+html
+	overflow-x: hidden
+
 h1, h2, h3, h4, h5, h6
 	margin-bottom: 0
 	line-height: 1.4
@@ -52,17 +55,22 @@ ul
 	color: $secondary
 
 .btn
+	display: inline-block
+	text-align: center
 	background-color: $accent
 	color: #ffffff
 	border: none
 	font-size: 18px
 	cursor: pointer
 	font-weight: bold
+	line-height: 1.4
 	padding: 8px 30px
 	border-radius: 25px
 	transition: background-color .15s ease
 	&:hover, &:active
 		background-color: darken($accent, 7)
+		color: #ffffff
+		text-decoration: none
 	&-shadow
 		box-shadow: 2px 5px 12px 5px rgba(240, 99, 19, 0.23)
 
@@ -88,6 +96,9 @@ ul
 		padding: 10px
 		font-size: 14px
 		text-decoration: underline
+		transition: color .15s ease
+		&:hover
+			color: #cccccc
 
 
 .contacts-header
@@ -231,5 +242,144 @@ ul
 	&__accept-link
 		color: $text
 		text-decoration: underline
+
+.section-projects
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	color: #ffffff
+	padding: 70px 0 90px
+	&__title
+		margin-bottom: 30px
+	&__description
+		font-size: 18px
+	&__partners
+		margin-top: 80px
+	&__partner
+		img
+			margin: 0 auto
+
+.section-title
+	font-size: 36px
+	line-height: 1.1
+
+.slick-dots
+	display: flex
+	justify-content: center
+	li
+		width: 18px
+		height: 18px
+		border-radius: 50%
+		background-color: rgba(255, 255, 255, 0.2)
+		margin: 0 6px
+		cursor: pointer
+		transition: background-color .15s ease
+		&:hover, &.slick-active
+			background-color: rgba(255, 255, 255, 1)
+
+.slider-projects
+	position: relative
+	margin-top: 40px
+	padding: 0 80px
+	&__nav
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 999
+		width: 50px
+		height: 50px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		border: 3px solid rgba(255,255,255,0.2)
+		cursor: pointer
+		transition: border-color .15s ease
+		&--prev
+			left: 0
+		&--next
+			right: 0
+		&:hover, &:active
+			border-color: rgba(255,255,255, 0.4)
+			.slider-projects__nav-icon
+				fill: rgba(255,255,255,1)
+	&__nav-icon
+		width: 18px
+		height: 18px
+		fill: rgba(255,255,255,0.8)
+		transition: fill .15s ease
+	&__dots
+		margin-top: 30px
+
+.item-project
+	&__content
+		padding-bottom: 20px
+	&__logo
+		max-width: 200px
+		margin-bottom: 20px
+	&__title
+		font-size: 22px
+		margin-bottom: 40px
+	&__text
+		font-size: 18px
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	&__btn
+		margin-top: 25px
+	&__img-wrap
+		display: flex
+		align-items: center
+
+.section-offers
+	padding: 80px 0
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	&__items
+		margin-left: -25px
+		margin-right: -25px
+	&__title
+		margin-bottom: 60px
+
+.item-offer
+	margin-bottom: 50px
+	padding-left: 25px
+	padding-right: 25px
+	transition: transform .35s ease
+	&:hover
+		transform: scale(1.05)
+	&__inner
+		text-align: center
+		background-color: #fff
+		box-shadow: 2px 2px 11px -3px rgba(70, 108, 233, 0.73)
+		height: 100%
+		border-radius: 30px
+		padding: 40px 50px
+		display: flex
+		flex-direction: column
+	&__icon-wrap
+		width: 110px
+		height: 110px
+		border-radius: 50%
+		background-color: $secondary
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 0 auto 25px
+	&__icon
+		fill: #ffffff
+		width: 70px
+		height: 70px
+	&__title
+		font-size: 28px
+		margin-bottom: 20px
+	&__text
+		font-size: 18px
+		line-height: 1.4
+		margin-bottom: 40px
+	&__btn
+		margin-top: auto
+		align-self: center
 
 @import "media" // Always at the end
