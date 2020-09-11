@@ -1,5 +1,7 @@
 $(function() {
 
+	svg4everybody();
+
 	$('.slider-projects__js').slick({
 		slidesToShow: 1,
 		arrows: true,
