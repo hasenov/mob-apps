@@ -15,4 +15,10 @@ $(function() {
 		speed: 350
 	});
 
+	$(".tab").not(":first").hide();
+	$(".tabs .tab-btn").click(function() {
+		$(".tabs .tab-btn").removeClass("active").eq($(this).index()).addClass("active");
+		$(".tab").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
+
 });

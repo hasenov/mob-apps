@@ -9,7 +9,12 @@
 	background-color: $accent
 	color: #fff
 
+html
+	overflow-x: hidden
+	height: 100%
+
 body
+	height: 100%
 	font-size: 16px
 	min-width: 320px
 	position: relative
@@ -37,9 +42,6 @@ body
 
 b, strong
 	font-weight: bold
-
-html
-	overflow-x: hidden
 
 h1, h2, h3, h4, h5, h6
 	margin-bottom: 0
@@ -101,7 +103,7 @@ ul
 			color: #cccccc
 
 
-.contacts-header
+.contacts-block
 	display: flex
 	align-items: center
 	text-align: right
@@ -186,11 +188,30 @@ ul
 	position: relative
 	z-index: 2
 	padding: 21px 21px 25px
+	&--transparent
+		background-color: transparent
+	&--white-color
+		color: #ffffff
+		.form-callback__accept-link
+			color: #ffffff
+		.form-callback__accept
+			color: #d7d7d7
+		.form-callback__accept-icon
+			fill: #ffffff
+		.form-callback__accept-icon-wrap
+			border-color: #ffffff
+		.form-callback__control
+			border-color: #ffffff
+			color: #ffffff
+			&::placeholder
+				color: #ffffff
 	&__title
 		font-size: 20px
 		text-align: center
 		margin-bottom: 30px
-	&__form
+	&__descr
+		text-align: center
+		margin-bottom: 10px
 
 .form-callback
 	&__fields
@@ -217,6 +238,7 @@ ul
 		width: 100%
 		font-size: 13px
 		padding: 6px 0
+		background: none
 		&:focus
 			border-color: rgb(70, 108, 233)
 	&__select
@@ -381,5 +403,371 @@ ul
 	&__btn
 		margin-top: auto
 		align-self: center
+
+.section-callback
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	color: #ffffff
+	padding: 60px 0
+	&__title
+		font-size: 32px
+		margin-bottom: 25px
+	&__text
+		font-size: 18px
+	&__callback
+		padding: 50px 25px 25px
+		.form-callback__control
+			font-size: 16px
+	&__descr
+		font-size: 18px
+		margin-bottom: 10px
+	&__col
+		padding-left: 10px
+		padding-right: 10px
+
+.section-result
+	padding: 80px 0
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	&__title
+		margin-bottom: 45px
+
+.item-result
+	align-items: center
+	margin-bottom: 70px
+	&:last-child
+		margin-bottom: 0
+	&:nth-child(even)
+		flex-direction: row-reverse
+	&__title
+		font-size: 32px
+		margin-bottom: 30px
+		line-height: 1.2
+	&__text
+		font-size: 18px
+		margin-bottom: 10px
+		line-height: 1.4
+	&__list
+		margin-left: 10px
+		li
+			position: relative
+			padding-left: 50px
+			margin-bottom: 15px
+			line-height: 1.4
+			&::before
+				content: ''
+				background-image: url('../img/icons/info.svg')
+				display: block
+				height: 28px
+				width: 28px
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+			&:last-child
+				margin-bottom: 0
+	&__list-title
+		font-size: 18px
+		margin-bottom: 15px
+	&__list-icon
+		width: 25px
+		height: 25px
+	&__btn
+		margin-top: 40px
+
+.section-second-callback
+	background-position: center bottom
+	padding: 80px 0
+	.section-callback__title
+		line-height: 1.4
+
+.section-terms
+	padding: 80px 0 130px
+	&__title
+		margin-bottom: 80px
+	&__callback
+		background-color: $secondary
+		max-width: 900px
+		margin: 60px auto 0 auto
+		.callback__title
+			text-align: left
+			font-size: 22px
+		.callback__form
+			position: relative
+			padding-right: 340px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				background-image: url(../img/book.png)
+				background-size: contain
+				background-repeat: no-repeat
+				background-position: center top
+				width: 340px
+				height: 340px
+				top: -85px
+				right: -10px
+				z-index: 2
+		.form-callback__control
+			font-size: 16px
+
+.item-terms
+	align-items: center
+	margin-bottom: 120px
+	&:last-child
+		margin-bottom: 0
+	&:nth-child(even)
+		flex-direction: row-reverse
+	&__title
+		font-size: 28px
+		line-height: 1.1
+		margin-bottom: 30px
+	&__text
+		font-size: 18px
+		line-height: 1.4
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	&__quote
+		margin-top: 40px
+
+
+.quote
+	border: 3px solid $secondary
+	border-radius: 30px
+	display: flex
+	align-items: center
+	padding: 10px 20px 10px 0
+	&__icon-wrap
+		padding: 0 35px
+	&__icon
+		width: 60px
+	&__title
+		font-weight: normal
+		font-size: 14px
+		margin-bottom: 7px
+	&__text
+		font-size: 18px
+		line-height: 1.4
+
+.section-stages
+	&__title
+		margin-bottom: 100px
+	&__callback
+		background-color: $secondary
+		max-width: 900px
+		margin: 60px auto 0 auto
+		.callback__title
+			text-align: left
+			font-size: 22px
+		.form-callback__control
+			font-size: 16px
+		.form-callback__accept
+			position: relative
+			padding-left: 37px
+			line-height: 1.3
+		.form-callback__accept-icon-wrap
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+		.form-callback__fields
+			margin-bottom: 0
+		
+
+.tabs
+	&__btns
+		border-bottom: 2px solid #d8d8d8
+	&__btns-content
+		display: flex
+		justify-content: space-between
+	&__content
+		padding-top: 130px
+
+.tab-btn
+	text-align: center
+	cursor: pointer
+	position: relative
+	&::before
+		content: ''
+		display: none
+		width: 14px
+		height: 14px
+		border-radius: 50%
+		position: absolute
+		background-color: $secondary
+		bottom: -7px
+		left: 50%
+		transform: translateX(-50%)
+	&.active
+		&::before
+			display: block
+		.tab-btn__icon
+			fill: $secondary
+		.tab-btn__title
+			color: #000000
+	&__icon
+		fill: #d8d8d8
+		width: 80px
+		height: 80px
+		margin-bottom: 35px
+	&__title
+		color: #a6a6a6
+		font-size: 13px
+		text-transform: uppercase
+		margin-bottom: -55px
+		letter-spacing: 1.3px
+		
+
+.tab
+	&__title
+		font-size: 28px
+		margin-bottom: 25px
+	&__content
+		align-items: center
+
+.item-tab
+	margin-bottom: 25px
+	&:last-child
+		margin-bottom: 0
+	&__title
+		font-size: 18px
+		margin-bottom: 10px
+	&__text
+		font-size: 18px
+		margin-bottom: 10px
+		line-height: 1.4
+		&:last-child
+			margin-bottom: 0
+	&__list
+		list-style-type: disc
+		margin-left: 40px
+		
+.section-track
+	padding: 80px 0
+	&__header
+		width: 60%
+		margin-bottom: 50px
+	&__title
+		margin-bottom: 30px
+	&__descr
+		font-size: 18px
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	&__items
+
+.item-track
+	box-shadow: 2px 2px 11px -3px rgba(70, 108, 233, 0.73)
+	border-radius: 30px
+	background-color: #fff
+	text-align: center
+	padding: 10px 21px 26px
+	height: 100%
+	display: flex
+	flex-direction: column
+	transition: transform .25s ease-in-out
+	&:hover
+		transform: scale(1.05)
+	&__img-wrap
+		margin-bottom: 15px
+	&__img
+		width: 80px
+		margin: 0 auto
+	&__title
+		font-size: 18px
+		margin-bottom: 10px
+		letter-spacing: 1.6px
+	&__text
+		font-size: 14px
+		margin-bottom: 5px
+		&:last-child
+			margin-bottom: 0
+	&__link
+		font-size: 14px
+		text-decoration: underline
+		margin-top: auto
+
+.section-contact
+	padding-top: 50px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	&__callback
+		background-color: $secondary
+		margin-bottom: 40px
+		.form-callback__control
+			font-size: 16px
+		.form-callback__field--input
+			flex: 0 1 auto
+	&__content
+		padding-left: 70px
+	&__about
+		margin-bottom: 30px
+	&__img-wrap
+		display: flex
+		align-items: flex-end
+
+.about
+	background-color: #26b3e0
+	color: #ffffff
+	padding: 25px 40px
+	border-radius: 5px 5px 5px 0
+	position: relative
+	&::before
+		content: ''
+		display: block
+		width: 0
+		height: 0
+		border-bottom: 20px solid #26b3e0
+		border-left: 20px solid transparent
+		position: absolute
+		bottom: 0
+		right: 100%
+		z-index: 9
+	&__content
+		border-bottom: 3px solid #ffffff
+		padding-bottom: 20px
+	&__text
+		font-size: 18px
+		line-height: 1.45
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	&__footer
+		display: flex
+		padding-top: 15px
+	&__author
+	&__name
+		font-size: 20px
+		margin-bottom: 5px
+	&__position
+	&__sign
+		max-width: 190px
+
+.footer
+	background-color: #f0f0f0
+	padding: 18px 0
+	&__content
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__logo
+		max-width: 180px
+	&__link
+		font-size: 12px
+		text-decoration: underline
+	&__contacts
+		.contacts-block__action-item
+			border: none
+			background-color: #5cbe3a
+			&:hover
+				background-color: darken(#5cbe3a, 5)
+		.contacts-block__icon
+			fill: #000000
+		.contacts-block__link
+			color: #1949e6
 
 @import "media" // Always at the end
