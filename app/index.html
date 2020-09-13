@@ -28,17 +28,22 @@
 		<header class="header">
 			<div class="header__content container">
 	
-				<div class="header__logo-wrap">
+				<a class="header__logo-wrap" href="#">
 					<img class="header__logo" src="img/logo.png" alt="logo">
-				</div>
+				</a>
 	
 				<nav class="header__menu menu">
+					<button class="menu__hamburger hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
 					<ul class="menu__list">
-						<li><a href="#" class="menu__link">Получить КП</a></li>
-						<li><a href="#" class="menu__link">Гарантия</a></li>
-						<li><a href="#" class="menu__link">Условия работы</a></li>
-						<li><a href="#" class="menu__link">Схема работы</a></li>
-						<li><a href="#" class="menu__link">Кейсы</a></li>
+						<li><a href="#offer" class="menu__link">Получить КП</a></li>
+						<li><a href="#result" class="menu__link">Гарантия</a></li>
+						<li><a href="#terms" class="menu__link">Условия работы</a></li>
+						<li><a href="#stages" class="menu__link">Схема работы</a></li>
+						<li><a href="#projects" class="menu__link">Кейсы</a></li>
 					</ul>
 				</nav>
 	
@@ -61,27 +66,43 @@
 
 		<div class="section-showcase__content container">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-lg-7">
 					<div class="showcase">
+						<div class="showcase__contacts contacts-block d-lg-none">
+							<div class="contacts-block__links">
+								<p class="contacts-block__text"><a href="#" class="contacts-block__link">+7 (499) 110-54-90</a></p>
+								<p class="contacts-block__text contacts-block__text--sm"><a href="#" class="contacts-block__link">sales@tecman.ru</a></p>
+							</div>
+							<div class="contacts-block__actions">
+								<a class="contacts-block__action-item" href="#">
+									<svg class="contacts-block__icon" role="img">
+										<use href="img/icons/sprite.svg#whatsapp"/>
+									</svg>
+								</a>
+							</div>
+						</div>
 						<h3 class="showcase__description">Разработка мобильных приложений под ключ</h3>
+						<div class="showcase-img d-lg-none">
+							<img class="showcase-img__img img-responsive" src="img/phone.png" alt="alt">
+						</div>
 						<h1 class="showcase__title">Создадим ваше приложение в полном соответствии с ТЗ и в срок или вернем деньги</h1>
 						<div class="showcase__stats stats-showcase">
 							<div class="stats-showcase__item">
-								<p class="stats-showcase__number">1000000 +</p>
+								<p class="stats-showcase__number"><span id="countup-1">1000000</span> +</p>
 								<p class="stats-showcase__text">скачиваний в Appstore и Google play</p>
 							</div>
 							<div class="stats-showcase__item">
-								<p class="stats-showcase__number">100%</p>
+								<p class="stats-showcase__number"><span id="countup-2">100</span>%</p>
 								<p class="stats-showcase__text">прав на приложение будет принадлежать вам</p>
 							</div>
 							<div class="stats-showcase__item">
-								<p class="stats-showcase__number">80%</p>
+								<p class="stats-showcase__number"><span id="countup-3">80</span>%</p>
 								<p class="stats-showcase__text">приложений окупилось в течение года</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-lg-5 d-none d-lg-block">
 					<div class="showcase-img">
 						<img class="showcase-img__img" src="img/phone.png" alt="alt">
 					</div>
@@ -91,8 +112,8 @@
 				<h4 class="callback__title">Получите <span class="color-secondary">видеопрезентацию</span> наших работ в вашей сфере бизнеса</h4>
 				<form class="callback__form form-callback">
 					<div class="form-callback__fields">
-						<div class="form-callback__field">
-							<label class="form-callback__label" for="business">Вид бизнеса *</label>
+						<div class="form-callback__field with-label">
+							<span class="form-callback__label form-callback__label--select">Вид бизнеса *</span>
 							<select name="business"	id="business" class="form-callback__select form-callback__control">
 								<option value="0">Игры</option>
 								<option value="1">Банки и финансовые организации</option>
@@ -100,11 +121,12 @@
 								<option value="3" selected>Сфера услуг</option>
 							</select>
 						</div>
-						<div class="form-callback__field">
-							<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+						<div class="form-callback__field label-animated">
+							<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+							<span class="form-callback__label">Номер телефона *</span>
 						</div>
 						<div class="form-callback__field">
-							<input type="submit" value="Получить демонстрацию" class="form-callback__btn btn">
+							<button type="submit" class="form-callback__btn btn">Получить демонстрацию</button>
 						</div>
 					</div>
 					<p class="form-callback__accept">
@@ -113,15 +135,17 @@
 								<use href="img/icons/sprite.svg#check"/>
 							</svg>
 						</span>
-						Я даю согласие на
-						<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+						<span>
+							Я даю согласие на
+							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+						</span>
 					</p>
 				</form>
 			</div>
 		</div>
 	</section>
 
-	<section class="section-projects" style="background-image: url(img/bg_blue.png);">
+	<section class="section-projects" style="background-image: url(img/bg_blue.png);" id="projects">
 		<div class="container">
 			<h3 class="section-projects__title section-title">Наши проекты</h3>
 			<p class="section-projects__description">Работали с первыми лицами государств, топ-менеджерами и собственниками<br> крупнейших российских и зарубежных компаний.</p>
@@ -143,35 +167,35 @@
 
 					<div class="slider-projects__item item-project">
 						<div class="row">
-							<div class="col-md-5 item-project__content">
+							<div class="col-lg-5 item-project__content">
 									<img src="img/slide-1-logo.png" alt="alt" class="item-project__logo">
 									<h5 class="item-project__title">Приложение для сотрудников крупнейшей в мире энергетической компании</h5>
 									<p class="item-project__text">Эта история о том, как вовремя разработанное приложение, помогает упростить жизнь десяткам тысяч сотрудников крупнейшей энергетической компании России.</p>
 									<p class="item-project__text">Приложение упрощает и ускоряет бизнес-процессы Россетей. Помогает контролерам фиксировать показания электросчетчиков и подготавливать отчеты.</p>
 									<a href="#popup-rosseti" class="item-project__btn btn btn-shadow popup-form-link">Связаться с менеджером этого проекта</a>
 							</div>
-							<div class="col-md-7 item-project__img-wrap">
+							<div class="col-lg-7 item-project__img-wrap">
 								<img class="item-project__img img-responsive" src="img/slide-1.png" alt="alt">
 							</div>
 						</div>
 					</div>
 					<div class="slider-projects__item item-project">
 						<div class="row">
-							<div class="col-md-5 item-project__content">
+							<div class="col-lg-5 item-project__content">
 									<img src="img/slide-2-logo.png" alt="alt" class="item-project__logo">
 									<h5 class="item-project__title">Система управления многоквартирным домом для стартапа</h5>
 									<p class="item-project__text">В проекте ELSA мы работали с главной болью в взаимоотношения УК и собственников многоквартирных домов. Боль решить не удалось, люди остаюсь людьми даже с крутым мобильным приложением.</p>
 									<p class="item-project__text">А вот процесс взаимодействия сделали проще, например можно внести показания всех счетчиков и получить квитанцию на телефоне, открыть дискуссию с УК или создать голосование, посмотреть историю любых изменений и операций .</p>
 									<a href="#popup-elsa" class="item-project__btn btn btn-shadow popup-form-link">Связаться с менеджером этого проекта</a>
 							</div>
-							<div class="col-md-7 item-project__img-wrap">
+							<div class="col-lg-7 item-project__img-wrap">
 								<img class="item-project__img img-responsive" src="img/slide-2.png" alt="alt">
 							</div>
 						</div>
 					</div>
 					<div class="slider-projects__item item-project">
 						<div class="row">
-							<div class="col-md-5 item-project__content">
+							<div class="col-lg-5 item-project__content">
 									<img src="img/slide-3-logo.png" alt="alt" class="item-project__logo">
 									<h5 class="item-project__title">Управление и калибровка подвеса камеры для профессиональной съемки</h5>
 									<p class="item-project__text">Basecam electronics — это Крутые Технари. Они хорошо разбираются в электронике, в разработке ПО и имеют десятки специалистов для своей разработки. Но иногда и этого бывает недостаточно…</p>
@@ -179,42 +203,42 @@
 									<p class="item-project__text">Удивительный проект на стыке железа, софта и математики.</p>
 									<a href="#popup-basecam" class="item-project__btn btn btn-shadow popup-form-link">Связаться с менеджером этого проекта</a>
 							</div>
-							<div class="col-md-7 item-project__img-wrap">
+							<div class="col-lg-7 item-project__img-wrap">
 								<img class="item-project__img img-responsive" src="img/slide-3.png" alt="alt">
 							</div>
 						</div>
 					</div>
 					<div class="slider-projects__item item-project">
 						<div class="row">
-							<div class="col-md-5 item-project__content">
+							<div class="col-lg-5 item-project__content">
 									<img src="img/slide-4-logo.png" alt="alt" class="item-project__logo">
 									<h5 class="item-project__title">Платежный сервис для Билайна и Альфабанка</h5>
 									<p class="item-project__text">Чтобы вы понимали уровень нашей ответственности за проект, скажем так: дедлайном разработки была публичная презентация приложения, на которой присутствовали представители VISA, Билайна и Альфабанка.</p>
 									<p class="item-project__text">Проект был веселым. Сжатые сроки. Полеты в Шэньчжэнь для встреч с производителем устройств. Взаимодействие с китайцами, чтобы написать драйвера. Ночевки в Альфабанке, чтобы сделать интеграцию… и организация техподдержки, работающей 24/7 в 11 часовых зонах.</p>
 									<a href="#popup-payme" class="item-project__btn btn btn-shadow popup-form-link">Связаться с менеджером этого проекта</a>
 							</div>
-							<div class="col-md-7 item-project__img-wrap">
+							<div class="col-lg-7 item-project__img-wrap">
 								<img class="item-project__img img-responsive" src="img/slide-4.png" alt="alt">
 							</div>
 						</div>
 					</div>
 					<div class="slider-projects__item item-project">
 						<div class="row">
-							<div class="col-md-5 item-project__content">
+							<div class="col-lg-5 item-project__content">
 									<img src="img/slide-5-logo.png" alt="alt" class="item-project__logo">
 									<h5 class="item-project__title">Система лояльности для 1100 АЗС в Румынии, Молдове, Болгарии и Грузии</h5>
 									<p class="item-project__text">Общение с заказчиком полностью велось на английском языке, а нам приходилось делать интеграции с системами, в которые “русская душа” ни разу не заглядывала. Это было сложно, но мы выросли в разы и теперь готовы сделать подобный проект еще быстрее и качественнее.</p>
 									<p class="item-project__text">Приложение помогает клиенту находить оптимальные места для заправки,  показывает наколенные баллы, информирует о ценах, скидках, специальных предложениях.</p>
 									<a href="#popup-rompetrol" class="item-project__btn btn btn-shadow popup-form-link">Связаться с менеджером этого проекта</a>
 							</div>
-							<div class="col-md-7 item-project__img-wrap">
+							<div class="col-lg-7 item-project__img-wrap">
 								<img class="item-project__img img-responsive" src="img/slide-5.png" alt="alt">
 							</div>
 						</div>
 					</div>
 					<div class="slider-projects__item item-project">
 						<div class="row">
-							<div class="col-md-5 item-project__content">
+							<div class="col-lg-5 item-project__content">
 									<img src="img/slide-6-logo.png" alt="alt" class="item-project__logo">
 									<h5 class="item-project__title">Интернет-магазин для крупного дилера в России </h5>
 									<p class="item-project__text">Заказчик ведущий дилер элитных чаев и кофе в России. </p>
@@ -222,14 +246,14 @@
 									<p class="item-project__text">Интернет-магазин позволил заказчику запустить розничные продажи с минимальными издержками на ИТ.</p>
 									<a href="#popup-sunny" class="item-project__btn btn btn-shadow popup-form-link">Связаться с менеджером этого проекта</a>
 							</div>
-							<div class="col-md-7 item-project__img-wrap">
+							<div class="col-lg-7 item-project__img-wrap">
 								<img class="item-project__img img-responsive" src="img/slide-6.png" alt="alt">
 							</div>
 						</div>
 					</div>
 					<div class="slider-projects__item item-project">
 						<div class="row">
-							<div class="col-md-5 item-project__content">
+							<div class="col-lg-5 item-project__content">
 									<img src="img/slide-7-logo.png" alt="alt" class="item-project__logo">
 									<h5 class="item-project__title">VPN анонимайзер с миллионом загрузок в AppStore и Google Play</h5>
 									<p class="item-project__text">Заказчик создал сервис whoer.net. За очень короткий срок, они получили популярность и миллионы пользователей в придачу.</p>
@@ -237,7 +261,7 @@
 									<p class="item-project__text">Приложение дает полную анонимность телефона по нажатию одной кнопки.</p>
 									<a href="#popup-vpn" class="item-project__btn btn btn-shadow popup-form-link">Связаться с менеджером этого проекта</a>
 							</div>
-							<div class="col-md-7 item-project__img-wrap">
+							<div class="col-lg-7 item-project__img-wrap">
 								<img class="item-project__img img-responsive" src="img/slide-7.png" alt="alt">
 							</div>
 						</div>
@@ -250,22 +274,22 @@
 			</div>
 
 			<div class="section-projects__partners row">
-				<div class="section-projects__partner col-md-2">
+				<div class="section-projects__partner col-lg-2 col-sm-4 col-6">
 					<img class="img-responsive" src="img/spar.png" alt="alt">
 				</div>
-				<div class="section-projects__partner col-md-2">
+				<div class="section-projects__partner col-lg-2 col-sm-4 col-6">
 					<img class="img-responsive" src="img/alfa.png" alt="alt">
 				</div>
-				<div class="section-projects__partner col-md-2">
+				<div class="section-projects__partner col-lg-2 col-sm-4 col-6">
 					<img class="img-responsive" src="img/ntv.png" alt="alt">
 				</div>
-				<div class="section-projects__partner col-md-2">
+				<div class="section-projects__partner col-lg-2 col-sm-4 col-6">
 					<img class="img-responsive" src="img/slide-1-logo.png" alt="alt">
 				</div>
-				<div class="section-projects__partner col-md-2">
+				<div class="section-projects__partner col-lg-2 col-sm-4 col-6">
 					<img class="img-responsive" src="img/legrand.png" alt="alt">
 				</div>
-				<div class="section-projects__partner col-md-2">
+				<div class="section-projects__partner col-lg-2 col-sm-4 col-6">
 					<img class="img-responsive" src="img/bee.png" alt="alt">
 				</div>
 			</div>
@@ -273,7 +297,7 @@
 		</div>
 	</section>
 
-	<section class="section-offers" style="background-image: url(img/bg_light.png);">
+	<section class="section-offers" style="background-image: url(img/bg_light.png);" id="offer">
 		<div class="container">
 
 			<h3 class="section-offers__title section-title">Получите индивидуальное<br> коммерческое предложение!</h3>
@@ -336,20 +360,21 @@
 		<div class="container">
 			<div class="row align-items-center">
 
-				<div class="col-md-6 section-callback__col section-callback__content">
+				<div class="col-lg-6 section-callback__col section-callback__content">
 					<h3 class="section-callback__title section-title">Не знаете с чего начать?</h3>
 					<p class="section-callback__text">Получите типовой план действий по разработке мобильного приложения.</p>
 				</div>
 
-				<div class="col-md-6 section-callback__col">
+				<div class="col-lg-6 section-callback__col">
 					<div class="section-callback__callback callback callback--transparent callback--white-color">
 						<form class="callback__form form-callback">
 							<div class="form-callback__fields">
-								<div class="form-callback__field">
-									<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+								<div class="form-callback__field label-animated">
+									<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+									<span class="form-callback__label">Номер телефона *</span>
 								</div>
-								<div class="form-callback__field">
-									<input type="submit" value="Получить типовый план" class="form-callback__btn btn btn-shadow">
+								<div class="form-callback__field text-center">
+									<button type="submit" class="form-callback__btn btn btn-shadow">Получить типовый план</button>
 								</div>
 							</div>
 							<p class="form-callback__accept">
@@ -358,8 +383,10 @@
 										<use href="img/icons/sprite.svg#check"/>
 									</svg>
 								</span>
-								Я даю согласие на
-								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+								<span>
+									Я даю согласие на
+									<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+								</span>
 							</p>
 						</form>
 					</div>
@@ -369,17 +396,17 @@
 		</div>
 	</section>
 
-	<section class="section-result" style="background-image: url(img/bg_light_lg.png);">
+	<section class="section-result" style="background-image: url(img/bg_light_lg.png);" id="result">
 		<div class="container">
 
 			<h3 class="section-result__title section-title">Почему мы можем дать вам<br> гарантию результата?</h3>
 
 			<div class="section-result__items">
 				<div class="row section-result__item item-result">
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<img class="item-result__img img-responsive" src="img/1.svg" alt="alt">
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<div class="item-result__content">
 							<h4 class="item-result__title">Более 50 программистов в штате</h4>
 							<p class="item-result__text">Мы могли бы сказать, что у нас работает несколько десятков программистов, и до сотни подрядчиков. </p>
@@ -405,10 +432,10 @@
 					</div>
 				</div>
 				<div class="row section-result__item item-result">
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<img class="item-result__img img-responsive" src="img/4.svg" alt="alt">
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<div class="item-result__content">
 							<h4 class="item-result__title">Три офиса в разных городах</h4>
 							<p class="item-result__text">Наше производство можно посмотреть в Москве и Ярославле. А встретиться с нашими штатными представителями - ещё и в Калининграде, Испании, Германии, Украине, Польше и Чехии.</p>
@@ -418,10 +445,10 @@
 					</div>
 				</div>
 				<div class="row section-result__item item-result">
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<img class="item-result__img img-responsive" src="img/3.svg" alt="alt">
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<div class="item-result__content">
 							<h4 class="item-result__title">Составление ТЗ по ГОСТ</h4>
 							<p class="item-result__text">Ваше техническое задание будет разработано бизнес-аналитиком с учетом ГОСТ серии 19 и 34.</p>
@@ -432,10 +459,10 @@
 					</div>
 				</div>
 				<div class="row section-result__item item-result">
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<img class="item-result__img img-responsive" src="img/4.svg" alt="alt">
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<div class="item-result__content">
 							<h4 class="item-result__title">Автоматизировали 50 видов бизнеса</h4>
 							<p class="item-result__text">Проектировали и разрабатывали: утилиты, используемые миллионами пользователей в 40 странах мира; платежную систему для банка из топ-5 в России; аналог Shazam для Израиля; систему “умный дом” для новостройки в Ярославле; билетную систему для “Скайпарка”; приложение для НТВ; и десятки прочих проектов для клиентов по всему миру.</p>
@@ -454,21 +481,22 @@
 		<div class="container">
 			<div class="row align-items-center">
 
-				<div class="col-md-5 section-callback__col section-callback__content">
+				<div class="col-lg-5 section-callback__col section-callback__content">
 					<h5 class="section-callback__descr">Аттракцион невиданной<br> щедрости</h5>
 					<h3 class="section-callback__title section-title">В случае заказа разработки у нас, создание технического задания для вас — бесплатно</h3>
 				</div>
 
-				<div class="col-md-7 section-callback__col">
+				<div class="col-lg-7 section-callback__col">
 					<p class="callback__descr">Оставьте номер телефона, чтобы воспользоваться предложением.</p>
 					<div class="section-callback__callback callback callback--transparent callback--white-color">
 						<form class="callback__form form-callback">
 							<div class="form-callback__fields">
-								<div class="form-callback__field">
-									<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+								<div class="form-callback__field label-animated">
+									<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+									<span class="form-callback__label">Номер телефона *</span>
 								</div>
-								<div class="form-callback__field">
-									<input type="submit" value="Получить бесплатное ТЗ" class="form-callback__btn btn btn-shadow">
+								<div class="form-callback__field text-center">
+									<button type="submit" class="form-callback__btn btn btn-shadow">Получить бесплатное ТЗ</button>
 								</div>
 							</div>
 							<p class="form-callback__accept">
@@ -477,8 +505,10 @@
 										<use href="img/icons/sprite.svg#check"/>
 									</svg>
 								</span>
-								Я даю согласие на
-								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+								<span>
+									Я даю согласие на
+									<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+								</span>
 							</p>
 						</form>
 					</div>
@@ -488,7 +518,7 @@
 		</div>
 	</section>
 
-	<section class="section-terms">
+	<section class="section-terms" id="terms">
 		<div class="container">
 
 			<h3 class="section-terms__title section-title">На каких условиях мы работаем?</h3>
@@ -546,11 +576,15 @@
 				<h4 class="callback__title">Получите образец договора на email</h4>
 				<form class="callback__form form-callback">
 					<div class="form-callback__fields">
-						<div class="form-callback__field">
-							<input type="email" class="form-callback__input form-callback__control" placeholder="Электронная почта *">
+						<div class="form-callback__field form-callback__field--input label-animated">
+							<input type="email" class="form-callback__input form-callback__control label-animated__input">
+							<span class="form-callback__label">Электронная почта *</span>
 						</div>
 						<div class="form-callback__field">
-							<input type="submit" value="Получить образец договора" class="form-callback__btn btn btn-shadow">
+							<button type="submit" class="form-callback__btn btn btn-shadow">Получить образец договора</button>
+						</div>
+						<div class="form-callback__field form-callback__field--img">
+							<img src="img/book.png" alt="alt" class="form-callback__img">
 						</div>
 					</div>
 					<p class="form-callback__accept">
@@ -559,8 +593,10 @@
 								<use href="img/icons/sprite.svg#check"/>
 							</svg>
 						</span>
-						Я даю согласие на
-						<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+						<span>
+							Я даю согласие на
+							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+						</span>
 					</p>
 				</form>
 			</div>
@@ -568,7 +604,7 @@
 		</div>
 	</section>
 
-	<section class="section-stages">
+	<section class="section-stages" id="stages">
 		<div class="container">
 
 			<h3 class="section-stages__title section-title">Поэтапная схема работы по выполнению проекта</h3>
@@ -769,21 +805,24 @@
 				<h4 class="callback__title">Получите подробное описание тринадцати этапов процесса<br> разработки приложения на email</h4>
 				<form class="callback__form form-callback">
 					<div class="form-callback__fields">
-						<div class="form-callback__field">
-							<input type="email" class="form-callback__input form-callback__control" placeholder="Электронная почта *">
+						<div class="form-callback__field label-animated">
+							<input type="email" class="form-callback__input form-callback__control label-animated__input">
+							<span class="form-callback__label">Электронная почта *</span>
 						</div>
-						<div class="form-callback__field">
-							<input type="submit" value="Получить этапы на email" class="form-callback__btn btn btn-shadow">
+						<div class="form-callback__field form-callback__field--btn">
+							<button type="submit" class="form-callback__btn btn btn-shadow">Получить этапы на email</button>
 						</div>
-						<div class="form-callback__field">
+						<div class="form-callback__field form-callback__field--accept">
 							<p class="form-callback__accept">
 								<span class="form-callback__accept-icon-wrap">
 									<svg class="form-callback__accept-icon" role="img">
 										<use href="img/icons/sprite.svg#check"/>
 									</svg>
 								</span>
-								Я даю согласие на
-								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+								<span>
+									Я даю согласие на
+									<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+								</span>
 							</p>
 						</div>
 					</div>
@@ -803,7 +842,7 @@
 			</div>
 
 			<div class="section-track__items row">
-				<div class="col-md-3">
+				<div class="col-lg-3 col-sm-6 item-track-wrapper">
 					<div class="section-track__item item-track">
 						<div class="item-track__img-wrap">
 							<img src="img/redmine.png" alt="alt" class="item-track__img img-responsive">
@@ -813,7 +852,7 @@
 						<a href="#" class="item-track__link">Подробнее...</a>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-lg-3 col-sm-6 item-track-wrapper">
 					<div class="section-track__item item-track">
 						<div class="item-track__img-wrap">
 							<img src="img/github.png" alt="alt" class="item-track__img img-responsive">
@@ -823,7 +862,7 @@
 						<a href="#" class="item-track__link">Подробнее...</a>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-lg-3 col-sm-6 item-track-wrapper">
 					<div class="section-track__item item-track">
 						<div class="item-track__img-wrap">
 							<img src="img/trello.png" alt="alt" class="item-track__img img-responsive">
@@ -833,7 +872,7 @@
 						<a href="#" class="item-track__link">Подробнее...</a>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-lg-3 col-sm-6 item-track-wrapper">
 					<div class="section-track__item item-track">
 						<div class="item-track__img-wrap">
 							<img src="img/mail.png" alt="alt" class="item-track__img img-responsive">
@@ -877,8 +916,9 @@
 						<h4 class="callback__title">Консультация от основателя ИТ компании, которому не нужно вам что-либо продавать</h4>
 						<form class="callback__form form-callback">
 							<div class="form-callback__fields">
-								<div class="form-callback__field form-callback__field--input">
-									<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+								<div class="form-callback__field form-callback__field--input label-animated">
+									<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+									<span class="form-callback__label">Номер телефона *</span>
 								</div>
 								<div class="form-callback__field">
 									<button class="form-callback__btn btn btn-shadow" type="submit">Получить консультацию Михаила</button>
@@ -890,8 +930,10 @@
 										<use href="img/icons/sprite.svg#check"/>
 									</svg>
 								</span>
-								Я даю согласие на
-								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+								<span>
+									Я даю согласие на
+									<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+								</span>
 							</p>
 						</form>
 					</div>
@@ -904,9 +946,9 @@
 	<footer class="footer">
 		<div class="footer__content container">
 
-			<div class="footer__logo-wrap">
+			<a class="footer__logo-wrap" href="#">
 				<img src="img/logo_blue.png" alt="logo" class="footer__logo">
-			</div>
+			</a>
 
 			<a href="#popup-privacy" class="footer__link popup-privacy-link">Политика конфиденциальности</a>
 
@@ -928,15 +970,15 @@
 
 		<form id="popup-rosseti" class="popup popup-form mfp-hide">
 			<div class="popup__header">
-				<h4 class="popup__title"></h4>
 			</div>
 			<div class="popup__content">
 				<div class="popup__callback callback callback--transparent callback--white-color">
 					<h4 class="callback__title">Связаться с менеджером проекта Россети</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Связаться</button>
@@ -948,8 +990,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -957,15 +1001,15 @@
 		</form>
 		<form id="popup-elsa" class="popup popup-form mfp-hide">
 			<div class="popup__header">
-				<h4 class="popup__title"></h4>
 			</div>
 			<div class="popup__content">
 				<div class="popup__callback callback callback--transparent callback--white-color">
 					<h4 class="callback__title">Связаться с менеджером проекта ELSA</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Связаться</button>
@@ -977,8 +1021,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -986,15 +1032,15 @@
 		</form>
 		<form id="popup-basecam" class="popup popup-form mfp-hide">
 			<div class="popup__header">
-				<h4 class="popup__title"></h4>
 			</div>
 			<div class="popup__content">
 				<div class="popup__callback callback callback--transparent callback--white-color">
 					<h4 class="callback__title">Связаться с менеджером проекта BASECAM</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Связаться</button>
@@ -1006,8 +1052,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1015,15 +1063,15 @@
 		</form>
 		<form id="popup-payme" class="popup popup-form mfp-hide">
 			<div class="popup__header">
-				<h4 class="popup__title"></h4>
 			</div>
 			<div class="popup__content">
 				<div class="popup__callback callback callback--transparent callback--white-color">
 					<h4 class="callback__title">Связаться с менеджером проекта PAYME</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Связаться</button>
@@ -1035,8 +1083,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1044,15 +1094,15 @@
 		</form>
 		<form id="popup-rompetrol" class="popup popup-form mfp-hide">
 			<div class="popup__header">
-				<h4 class="popup__title"></h4>
 			</div>
 			<div class="popup__content">
 				<div class="popup__callback callback callback--transparent callback--white-color">
 					<h4 class="callback__title">Связаться с менеджером проекта ROMPETROL</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Связаться</button>
@@ -1064,8 +1114,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1073,15 +1125,15 @@
 		</form>
 		<form id="popup-sunny" class="popup popup-form mfp-hide">
 			<div class="popup__header">
-				<h4 class="popup__title"></h4>
 			</div>
 			<div class="popup__content">
 				<div class="popup__callback callback callback--transparent callback--white-color">
 					<h4 class="callback__title">Связаться с менеджером проекта Sunny</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Связаться</button>
@@ -1093,8 +1145,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1102,15 +1156,15 @@
 		</form>
 		<form id="popup-vpn" class="popup popup-form mfp-hide">
 			<div class="popup__header">
-				<h4 class="popup__title"></h4>
 			</div>
 			<div class="popup__content">
 				<div class="popup__callback callback callback--transparent callback--white-color">
 					<h4 class="callback__title">Связаться с менеджером проекта VPN</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input" >
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Связаться</button>
@@ -1122,8 +1176,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1139,8 +1195,9 @@
 					<h4 class="callback__title">Получите индивидуальное коммерческое предложение</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input">
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Получить КП</button>
@@ -1152,8 +1209,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1168,8 +1227,9 @@
 					<h4 class="callback__title">Получите индивидуальное коммерческое предложение</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input">
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Получить КП</button>
@@ -1181,8 +1241,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1197,8 +1259,9 @@
 					<h4 class="callback__title">Получите индивидуальное коммерческое предложение</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input">
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Получить КП</button>
@@ -1210,8 +1273,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1226,8 +1291,9 @@
 					<h4 class="callback__title">Получите индивидуальное коммерческое предложение</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input">
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Получить КП</button>
@@ -1239,8 +1305,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1256,8 +1324,9 @@
 					<h4 class="callback__title">Заявка на подбор специалиста</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input">
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Подобрать</button>
@@ -1269,8 +1338,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1285,8 +1356,9 @@
 					<h4 class="callback__title">Записаться на встречу</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input">
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Записаться</button>
@@ -1298,8 +1370,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1314,8 +1388,9 @@
 					<h4 class="callback__title">Примеры нашего ТЗ</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input">
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Получить</button>
@@ -1327,8 +1402,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
@@ -1343,8 +1420,9 @@
 					<h4 class="callback__title">Получить консультацию</h4>
 					<div class="callback__form form-callback">
 						<div class="form-callback__fields">
-							<div class="form-callback__field form-callback__field--input">
-								<input type="tel" class="form-callback__input form-callback__control" placeholder="Номер телефона *">
+							<div class="form-callback__field form-callback__field--input label-animated">
+								<input type="tel" class="form-callback__input form-callback__control phone label-animated__input">
+								<span class="form-callback__label">Номер телефона *</span>
 							</div>
 							<div class="form-callback__field">
 								<button class="form-callback__btn btn btn-shadow" type="submit">Получить</button>
@@ -1356,8 +1434,10 @@
 									<use href="img/icons/sprite.svg#check"/>
 								</svg>
 							</span>
-							Я даю согласие на
-							<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							<span>
+								Я даю согласие на
+								<a href="#" class="form-callback__accept-link">обработку своих персональных данных</a>
+							</span>
 						</p>
 					</div>
 				</div>
