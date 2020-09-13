@@ -21,4 +21,18 @@ $(function() {
 		$(".tab").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
 
+	$('.popup-form-link').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		removalDelay: 300,
+  	mainClass: 'mfp-fade'
+	});
+
+	$('.popup-privacy-link').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		removalDelay: 300,
+  	mainClass: 'mfp-fade'
+	});
+
 });

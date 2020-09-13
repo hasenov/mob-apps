@@ -11,7 +11,6 @@
 
 html
 	overflow-x: hidden
-	height: 100%
 
 body
 	height: 100%
@@ -69,7 +68,8 @@ ul
 	padding: 8px 30px
 	border-radius: 25px
 	transition: background-color .15s ease
-	&:hover, &:active
+	&:hover, &:active, &:focus
+		outline: none
 		background-color: darken($accent, 7)
 		color: #ffffff
 		text-decoration: none
@@ -334,6 +334,7 @@ ul
 		margin-top: 30px
 
 .item-project
+	outline: none
 	&__content
 		padding-bottom: 20px
 	&__logo
@@ -769,5 +770,48 @@ ul
 			fill: #000000
 		.contacts-block__link
 			color: #1949e6
+
+.popup
+	background-color: #fff
+	max-width: 915px
+	margin: 0 auto
+	position: relative
+	border-radius: 6px
+	.form-callback__control
+		font-size: 16px
+	.form-callback__btn
+		width: 100%
+	&__header
+		padding: 15px
+		border-bottom: 1px solid #e5e5e5
+		min-height: 45px
+	&__title
+		font-weight: normal
+		font-size: 16px
+	&__content
+		padding: 20px
+	&__callback
+		background-color: $secondary
+
+.popup-privacy
+	max-width: 600px
+	p
+		margin-bottom: 10px
+		line-height: 1.4
+
+.mfp-fade.mfp-bg 
+	opacity: 0
+	transition: all 0.15s ease-out
+.mfp-fade.mfp-bg.mfp-ready 
+	opacity: 0.8
+.mfp-fade.mfp-bg.mfp-removing 
+	opacity: 0
+.mfp-fade.mfp-wrap .mfp-content 
+	opacity: 0
+	transition: all 0.15s ease-out
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+	opacity: 1
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+	opacity: 0	
 
 @import "media" // Always at the end
